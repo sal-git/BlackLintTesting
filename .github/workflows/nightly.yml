@@ -35,14 +35,17 @@ jobs:
           pip install black
           black --check . --exclude '/runner/' || echo "needs_formatting" > black_check.txt
 
-      - name: Commit to Git if Black shows differences
-        if: ${{ success() && hashFiles('black_check.txt') }}
+      - name: Check for changes
+        id: check_changes
         run: |
-          echo "runner/" >> .gitignore
-          git config --local user.email "stephenlightcap94@gmail.com"
-          git config --local user.name "sal-git"
-          git add --all -- ':!runner/'
-          git commit -m "AUTO: black format"
+          git config --local user.email "github-bsddeploy@vectorworks.net"
+          git config --local user.name "bsddeploy"
+          git add --all -- ':!runner/'  # Add all changes excluding runner/
+          if [[ $(git diff --cached --name-only) ]]; then
+            echo "needs_formatting=true" >> $GITHUB_ENV
+          else
+            echo "needs_formatting=false" >> $GITHUB_ENV
+          fi
 
       - name: Push changes
         if: env.needs_formatting == 'true'
