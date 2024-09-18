@@ -1,5 +1,5 @@
 def hello_(something):
-    h = ''
+    h = ""
 
 
 n = 1223
