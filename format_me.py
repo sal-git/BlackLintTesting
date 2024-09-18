@@ -3,6 +3,7 @@ def hello_(something):
 
 
 n = 1223
+n = "this is a perfectly fine string..."
 
 
 n = "asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasfasdfasdfsadfasdfasfasdfasdfas"
