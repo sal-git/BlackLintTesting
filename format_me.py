@@ -1,9 +1,9 @@
 def hello_(something):
-    h = ""
+    h = ''
 
 
 n = 1223
-n = "this is a perfectly fine string..."
+n = 'this is a perfectly fine string...'
 
 
-n = "asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasfasdfasdfsadfasdfasfasdfasdfas"
+n = "asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasfasdfasdfsadfasdfasfaasdfasdfasdfasfasfasfasfsafafasfasfsdfasdfas"
